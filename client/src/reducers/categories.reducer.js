@@ -10,7 +10,7 @@ export default (state = initialState.categories, action) => {
     case CATEGORIES_FETCH_FAILURE:
       return state;
     default:
-      console.log('categories reducer default');
+      console.log('categories reducer default', state);
       return state;
   }
 };
