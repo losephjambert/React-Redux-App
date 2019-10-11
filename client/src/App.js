@@ -1,7 +1,14 @@
-import React from 'react';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-function App() {
-  return <div className='App'>app</div>;
-}
+import CategoriesDashboard from "./components/CategoriesDashboard";
+
+const App = () => {
+  return (
+    <Switch>
+      <Route exact path="/" component={CategoriesDashboard} />
+    </Switch>
+  );
+};
 
 export default App;
