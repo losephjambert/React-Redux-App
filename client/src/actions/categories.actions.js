@@ -1,5 +1,5 @@
-import axios from "axios";
-import { baseURL, SERVICES } from "../api";
+import axios from 'axios';
+import { baseURL, SERVICES } from '../api';
 
 const START_FETCHING_CATEGORIES = `START_FETCHING_CATEGORIES`;
 const CATEGORIES_FETCH_SUCCESS = `CATEGORIES_FETCH_SUCCESS`;
@@ -10,15 +10,8 @@ const fetchCategories = () => dispatch => {
 
   axios
     .get(`${baseURL}/${SERVICES.GET.categories}`)
-    .then(response => console.log(response))
-    .catch(error =>
-      dispatch({ type: CATEGORIES_FETCH_FAILURE, payload: error })
-    );
+    .then(response => dispatch({ type: CATEGORIES_FETCH_SUCCESS, payload: response.data }))
+    .catch(error => dispatch({ type: CATEGORIES_FETCH_FAILURE, payload: error }));
 };
 
-export {
-  fetchCategories,
-  START_FETCHING_CATEGORIES,
-  CATEGORIES_FETCH_SUCCESS,
-  CATEGORIES_FETCH_FAILURE
-};
+export { fetchCategories, START_FETCHING_CATEGORIES, CATEGORIES_FETCH_SUCCESS, CATEGORIES_FETCH_FAILURE };

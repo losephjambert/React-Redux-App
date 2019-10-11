@@ -1,13 +1,16 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import CategoriesDashboard from "./components/CategoriesDashboard";
+import CategoriesDashboard from './components/CategoriesDashboard';
 
 const App = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={CategoriesDashboard} />
-    </Switch>
+    <>
+      <h1>Public Api Explorer</h1>
+      <Switch>
+        <Route exact path='/' component={CategoriesDashboard} />
+      </Switch>
+    </>
   );
 };
 
