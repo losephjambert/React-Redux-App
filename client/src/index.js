@@ -10,8 +10,8 @@ import store from './reducers';
 import './index.css';
 
 // todo
-// create store
-// wrap provider
+// create store ✔
+// wrap provider ✔
 // add routing
 // render a component via the index route
 ReactDOM.render(
