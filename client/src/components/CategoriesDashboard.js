@@ -9,11 +9,13 @@ const CategoriesDashboard = ({ fetchCategories, categories }) => {
 
   return (
     <>
-      <section>
-        <h2>Available Categories</h2>
-        <ul>
+      <section className='categories__section'>
+        <h2 className='categories__header'>Available Categories To Explore</h2>
+        <ul className='categories__list'>
           {categories.categoriesList.map((category, i) => (
-            <li key={i}>{category}</li>
+            <li className='categories__list__item' key={i}>
+              <span>{category}</span>
+            </li>
           ))}
         </ul>
       </section>

@@ -1,4 +1,4 @@
-/* Box sizing rules */
+// Box sizing rules
 *,
 *::before,
 *::after {
@@ -75,4 +75,50 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+header {
+  h1 {
+    font-size: 1.5rem;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+  p {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+// Categories Container
+.categories {
+  &__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 25vh;
+  }
+  &__header {
+    color: blue;
+    position: fixed;
+    left: 20px;
+    bottom: 0;
+    top: 100px;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 200px;
+    font-size: 3.4rem;
+  }
+  &__list {
+    grid-column: 2;
+    font-size: 2rem;
+    &__item:not(:first-of-type) {
+      margin: 25px 0;
+    }
+  }
+}
+ul.categories__list {
+  padding-left: 100px;
 }
