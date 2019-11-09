@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { fetchCategories } from '../actions';
 
-const CategoriesDashboard = ({ fetchCategories, categories }) => {
+const CategoriesDashboard = ({ categories }) => {
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetchCategories();
-  }, [fetchCategories]);
+    dispatch(fetchCategories());
+  }, [dispatch]);
 
   return (
     <>
@@ -31,5 +32,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { fetchCategories }
+  // { fetchCategories }
 )(CategoriesDashboard);
